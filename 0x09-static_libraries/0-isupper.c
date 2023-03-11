@@ -1,15 +1,13 @@
 #include "main.h"
 /**
- * _isupper - uppercase letters
- * @c: char to check
- *
- * Return: 0 or 1
+ * _isupper - checks for upper letters
+ * Return: the absolute value of an integer
+ * @c: number to be proccesed
  */
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 65 && c <= 90)
 		return (1);
-	else
+>>>>>>> ec03c016e6e26a0104613a39874a6d8227456fd5
 	return (0);
 }
-

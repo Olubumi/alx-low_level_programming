@@ -1,17 +1,12 @@
 #include "main.h"
-
-
 /**
- * _abs - computes the absolute value of an integer
- * @n: the int to check
- * Return: the absolute value of int
+ * _abs - checks for alpha letters
+ * Return: the absolute value of an integer
+ * @c: number to be proccesed
  */
-int _abs(int n)
+int _abs(int c)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	return (-n);
+	if (c < 0)
+		return (-c);
+	return (c);
 }
-
