@@ -4,8 +4,7 @@
 
 
 
-/*
- *
+/**
  * main - print the number of arguments passed to the program
 
  * @argc: number of arguments
@@ -20,6 +19,10 @@
 
 
 
+/**
+ * main - Entry point
+ *
+ */
 int main(int argc, char *argv[])
 
 {
