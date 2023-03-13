@@ -4,54 +4,24 @@
 		
 #include "main.h"
 		
-/**
-		
- * _strdup - duplicate to new memory space location
-		
- * @str: char
-		
- * Return: 0
-		
- */
-		
 char *_strdup(char *str)
-		
 {
-		
-	char *aaa;
-		
-	int i, r = 0;
-		
+  int i = 0, j, k = 0;
+  char *newStr = NULL;
 
-		
-	if (str == NULL)
-		
-		return (NULL);
-		
-	i = 0;
-		
-	while (str[i] != '\0')
-		
-		i++;
-		
+  while (str[k] != '\0')
+    {
+      i++;
+      k++;
+    }
 
-		
-	aaa = malloc(sizeof(char) * (i + 1));
-		
+  newStr = malloc(sizeof(char) * (i + 1));
 
-		
-	if (aaa == NULL)
-		
-		return (NULL);
-		
+  if (str == NULL)
+    return (NULL);
 
-		
-	for (r = 0; str[r]; r++)
-	aaa[r] = str[r];
-		
+  for (j = 0; j <= i; j++)
+    newStr[j] = str[j];
 
-		
-	return (aaa);
-		
+  return (newStr);
 }
-
