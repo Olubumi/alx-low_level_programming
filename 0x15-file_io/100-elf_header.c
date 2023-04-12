@@ -33,7 +33,7 @@ void check_elf(unsigned char *e_ident)
 		    e_ident[index] != 'E' &&
 		    e_ident[index] != 'L' &&
 		    e_ident[index] != 'F')
-	{
+		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
 		}
@@ -80,7 +80,8 @@ void print_class(unsigned char *e_ident)
 		printf("ELF32\n");
 		break;
 	case ELFCLASS64:
-		printf("ELF64\n");break;
+		printf("ELF64\n");
+		break;
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
@@ -259,7 +260,7 @@ void close_elf(int elf)
 }
 
 /**
- * main - Displays the information contained in the
+ * main - Prints the information contained in the
  *        ELF header at the start of an ELF file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
@@ -272,7 +273,7 @@ void close_elf(int elf)
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-int o, r;
+	int o, r;
 
 	o = open(argv[1], O_RDONLY);
 	if (o == -1)
